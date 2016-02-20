@@ -12,6 +12,9 @@
 		5132D1471C67D0A500A18045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5132D1451C67D0A500A18045 /* Main.storyboard */; };
 		5132D1491C67D0A500A18045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5132D1481C67D0A500A18045 /* Assets.xcassets */; };
 		5132D14C1C67D0A500A18045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5132D14A1C67D0A500A18045 /* LaunchScreen.storyboard */; };
+		516EA1041C6FD9300057DB3A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516EA1031C6FD9300057DB3A /* FBSDKCoreKit.framework */; };
+		516EA1061C6FD93A0057DB3A /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516EA1051C6FD93A0057DB3A /* FBSDKLoginKit.framework */; };
+		516EA1081C6FD9430057DB3A /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516EA1071C6FD9430057DB3A /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,10 @@
 		5132D1481C67D0A500A18045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5132D14B1C67D0A500A18045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5132D14D1C67D0A500A18045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		516EA1031C6FD9300057DB3A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		516EA1051C6FD93A0057DB3A /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		516EA1071C6FD9430057DB3A /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		516EA1091C6FDBA10057DB3A /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				516EA1061C6FD93A0057DB3A /* FBSDKLoginKit.framework in Frameworks */,
+				516EA1041C6FD9300057DB3A /* FBSDKCoreKit.framework in Frameworks */,
+				516EA1081C6FD9430057DB3A /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +48,9 @@
 		5132D1351C67D0A500A18045 = {
 			isa = PBXGroup;
 			children = (
+				516EA1051C6FD93A0057DB3A /* FBSDKLoginKit.framework */,
+				516EA1071C6FD9430057DB3A /* FBSDKShareKit.framework */,
+				516EA1031C6FD9300057DB3A /* FBSDKCoreKit.framework */,
 				5132D1401C67D0A500A18045 /* Hello World */,
 				5132D13F1C67D0A500A18045 /* Products */,
 			);
@@ -55,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				5132D1411C67D0A500A18045 /* AppDelegate.swift */,
+				516EA1091C6FDBA10057DB3A /* Bridging-Header.h */,
 				5132D1431C67D0A500A18045 /* ViewController.swift */,
 				5132D1451C67D0A500A18045 /* Main.storyboard */,
 				5132D1481C67D0A500A18045 /* Assets.xcassets */,
@@ -96,6 +110,7 @@
 				TargetAttributes = {
 					5132D13D1C67D0A500A18045 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = VSCXERP47J;
 					};
 				};
 			};
@@ -247,10 +262,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Hello World/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.profit.Hello-World";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hello World/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -258,10 +281,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Hello World/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.profit.Hello-World";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hello World/Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -284,6 +315,7 @@
 				5132D1521C67D0A500A18045 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
